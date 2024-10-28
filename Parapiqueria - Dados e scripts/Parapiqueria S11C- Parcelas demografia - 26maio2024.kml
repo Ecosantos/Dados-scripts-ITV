@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Parapiqueria S11C.kml</name>
+	<StyleMap id="waypoint1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#waypoint_n</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#waypoint_h1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="waypoint_h1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>https://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="waypoint_n">
+		<IconStyle>
+			<Icon>
+				<href>https://maps.google.com/mapfiles/kml/pal4/icon61.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Parapiqueria S11C</name>
+		<open>1</open>
+		<Placemark>
+			<name>PPQ PLOT01</name>
+			<TimeStamp><when>2024-05-23T12:39:24Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint1</styleUrl>
+			<Point>
+				<coordinates>-50.385484,-6.383313999999999,759.08</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PPQ PLOT02</name>
+			<TimeStamp><when>2024-05-23T12:40:27Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint1</styleUrl>
+			<Point>
+				<coordinates>-50.385457,-6.383332,758.5</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PPQ PLOT03</name>
+			<TimeStamp><when>2024-05-23T12:48:45Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint1</styleUrl>
+			<Point>
+				<coordinates>-50.38549799999999,-6.383315000000001,754.6900000000001</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PPQ PLOT04</name>
+			<TimeStamp><when>2024-05-23T13:12:42Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint1</styleUrl>
+			<Point>
+				<coordinates>-50.385579,-6.383381,751</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PPQ PLOT05</name>
+			<TimeStamp><when>2024-05-23T13:05:30Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint1</styleUrl>
+			<Point>
+				<coordinates>-50.38557000000001,-6.383417,753.5700000000001</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PPQ PLOT06</name>
+			<TimeStamp><when>2024-05-23T13:31:14Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint1</styleUrl>
+			<Point>
+				<coordinates>-50.385711,-6.383524,751.52</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PPQ PLOT08</name>
+			<TimeStamp><when>2024-05-23T13:56:47Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint1</styleUrl>
+			<Point>
+				<coordinates>-50.387444,-6.383582,786.16</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PPQ PLOT09</name>
+			<TimeStamp><when>2024-05-23T13:58:34Z</when>
+</TimeStamp>
+			<styleUrl>#waypoint1</styleUrl>
+			<Point>
+				<coordinates>-50.387425,-6.383569,786.22</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
