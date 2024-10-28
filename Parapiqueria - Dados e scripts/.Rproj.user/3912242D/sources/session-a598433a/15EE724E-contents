@@ -1,0 +1,20 @@
+rbind(
+  data.frame(projS11B_30,Site="S11B"),
+  data.frame(projS11C_30,Site="S11C"))%>%
+  mutate(total=rowSums(select_if(., is.numeric), na.rm = TRUE))%>%
+  mutate(Mean=mean(total),
+         Median=median(total))%>%
+  ggplot(.,aes(x=total,group=Site))+
+  geom_histogram(
+    aes(y=..count../sum(..count..),
+        fill=Site),
+    position = 'identity',color="black",alpha=.3)+
+  scale_fill_manual(values=c("#6e86e7","#ff9211"))+
+  scale_x_continuous(trans = ggallin::pseudolog10_trans)
+
+
+asinh_trans <- function(){
+  trans_new(name = 'asinh', transform = function(x) asinh(x), 
+            inverse = function(x) sinh(x))
+}
+install.packages("ggallin")

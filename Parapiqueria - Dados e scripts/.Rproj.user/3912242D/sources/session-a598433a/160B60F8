@@ -1,0 +1,28 @@
+{
+    "id": "160B60F8",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1730132708484.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "id": "cbed8e49f31e464b8951d389461e3010",
+        "name": "BestModel",
+        "title": "BestModel",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 22518311674839107,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1730132708484,
+    "read_only": false,
+    "read_only_alternatives": []
+}
