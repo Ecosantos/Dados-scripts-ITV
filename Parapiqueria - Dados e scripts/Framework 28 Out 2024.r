@@ -1,5 +1,5 @@
 #'######################################################
-#		Script Parapiqueria - FRAMEWORK -------------------
+#		Script Parapiqueria - FRAMEWORK
 #		 	Em desevolvimento
 #		Iniciado em: 05/08/2024
 #		Ultima atualização: 06/08/2024
@@ -13,13 +13,14 @@ library(ggrepel)
 library(ggridges)
 library(broom)
 
-rm(list=ls())
+(list=ls())
 
 
-#'===================================================
-#    =======  WORKFLOW   =====
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-## Goals ------
+
+#'=======================================================
+#    =======  WORKFLOW
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{
 ## 1.Estimate survival, stasis and growth using a Quadratic Programming inverse method
 ##  1.1. Step 1. Define the rules/constraints that must be given to the QP - Quadratic programming (C,b,non-zeros)
 ## 2. Reach a best method to estimate recruitment, as it cannot be directly estimated with QP
@@ -28,15 +29,15 @@ rm(list=ls())
 ## 5. Calculate lambda and plot results
 ## 6. Population viability (more complete for the sake of relatório final 2024)
 ## 6.1. Simulations with reducing vital rates'
-##'====================================================
+} ## Goals
+#'=======================================================
 
 
 #'=======================================================
-# ----		ACCESSORY FUNCTION =====
+# ----		ACCESSORY FUNCTION
 # Automatically detect C, b, and non-zero elements
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-## Rationale ----
-## - ven is the target MPM
+{## - ven is the target MPM
 ## - myC2ven make matrix C
 ##   - myC2ven must be make in two parts because it is not a simple identity matrix
 ## - mynonzero.ven determines the non-zero elements
@@ -45,8 +46,10 @@ rm(list=ls())
 ######  Additional information 
 ## Função ainda em desenvolvimento, parece não funcionar para matrizes 2x2 ainda.
 ## Não sei pq isso ocorre!
-### 
-##'=======================================================
+###
+}  ## Rationale
+#'=======================================================
+
 
 WoodPar<-function(ven){
 mynonzero.ven<- which(ven> 0)	#Determina quem non-zero elementos da matriz de transição (subdiagonal + classes que reproduzem)
@@ -68,15 +71,15 @@ return(out)
 }
 
 #'=======================================================
-##	----	EXAMPLE - Model Toy --------
+## EXAMPLE - Model Toy
 #'-------------------------------------------------------
-# Simulate an hypothetical population
+{# Simulate an hypothetical population
 # 		to assess model's accuracy
-## Rationale ---------
 ## Must run in order to determine C, non-zero elements and b
 ## which will be used to estimate survival
 ## 
 ## Also, contain model validation
+} ##Rationale
 ##'========================================================
 source("ModelToyv1.R")
 
@@ -84,7 +87,7 @@ source("ModelToyv1.R")
 #file.edit("ModelToyv1.R")
 
 #'=======================================================
-#	DATA LOADING and STANDARDIZATION  ----
+#	DATA LOADING and STANDARDIZATION
 #'-------------------------------------------------------
 # Estimate recruitment in Parapiqueria between 2022-2024
 #'========================================================
@@ -104,10 +107,11 @@ Abr24<-read.xlsx("Dados brutos/Dados parapiqueria - Completo - Consolidado 05Aug
 Mai24<-read.xlsx("Dados brutos/Dados parapiqueria - Completo - Consolidado 05Aug2024.xlsx",sheet="Maio2024")
 
 #'---------------------------------------------------------
-## -------  Merge Census --------
-####### Masking quadrants is necessary, 
+##          Merge Census
+{####### Masking quadrants is necessary, 
 ####### so quadrants is not included in group_by 
 ####### Excepting for census 2022 because quadrant was not implemented yet
+} # comments about group_by quadrants...
 #'---------------------------------------------------------
 
 ### 2024
@@ -119,12 +123,11 @@ data.frame(Mai24,Month="5"))%>%
 as_tibble()%>%
 group_by(Site,Plot,Month)%>%    #Quadrants not included
 summarise(Imaturos=sum(Imaturos),
-		Reprodutivos=sum(Reprodutivos))%>%
+		   Reprodutivos=sum(Reprodutivos))%>%
 ungroup()
 
 
 ### 2023
-
 census2023<-rbind(
 data.frame(Mar23,Month="3"),
 data.frame(Abr23,Month="4"),
@@ -143,14 +146,13 @@ data.frame(Mai22,Month="5"))%>%
 select(Site,Plot,Imaturos,Reprodutivos,Month)
 
 #'======================================================
-#		------- RECRUITMENT ----
+#	  ---- RECRUITMENT ----
 #'-------------------------------------------------------
 # Estimate recruitment in Parapiqueria between 2022-2024
 #'=======================================================
 
-
 #'--------------------------------------------------------
-##		Data preparation  ----
+##		Data preparation
 #'--------------------------------------------------------
 Census_all<-rbind(
 cbind(census2024,year="2024"),
@@ -159,22 +161,20 @@ cbind(census2022,year="2022"))%>%
 pivot_longer(Imaturos:Reprodutivos,names_to="stage")
 
 
-#### Maximum number of individuals ---- 
+#### Maximum number of individuals
 Census_all_max<-rbind(
 cbind(census2024,year="2024"),
 cbind(census2023,year="2023"),
 cbind(census2022,year="2022"))%>%
 group_by(Site,year,Plot)%>%
 summarise(MaxIm=max(Imaturos),
-	MaxRep=max(Reprodutivos))%>%
+          MaxRep=max(Reprodutivos))%>%
 mutate(MaxTot=ifelse(MaxIm>MaxRep,MaxIm,MaxRep))%>%
 pivot_longer(MaxIm:MaxTot,names_to="stage")
 
 	
-
-
 #'---------------------------------------------------------
-##		PAIRING TIMELAGS  ----
+##		PAIRING TIMELAGS
 #' --------------------------------------------------------
 ###     setting t0 and t1 
 #'--------------------------------------------------------
@@ -214,7 +214,7 @@ mutate(Site=as.factor(Site))%>%
 mutate(period=as.factor(paste0(t0y,"-",t1y)))
 
 #'----------------------------------------------------------------------------
-# ----		RECRUITMENT ANALYSES  ----
+#   ---- RECRUITMENT ANALYSES ----
 #'----------------------------------------------------------------------------
 library(lme4)
 library(DHARMa)
@@ -225,8 +225,8 @@ library(MuMIn)
 options(na.action=na.fail)
 
 #'----------------------------------------------------------------------------
-## Maximum Reprodutives > Maximum Immatures ----
-#Neg. Binomial has the best fit
+## Maximum Reprodutives > Maximum Immatures
+# Neg. Binomial has the best fit
 #'-------------------------------------------------------------------------
 
 nb_RepIm<-glmmTMB::glmmTMB(t1~0+t0*Site+(1|period),
@@ -269,22 +269,23 @@ ggeffects::predict_response(bestS11B, terms=c("t0[0:208]"))%>%data.frame()%>%hea
 
 
 
-## Dispersion factor in the negative distribution. ----
-##### Rationale:
-## Initially I was use this for simulate variation in fecundity but not sure if it is still necessary
-#' -----
+## Dispersion factor in the negative distribution.
+{
+## Initially I was using this for simulate variation in fecundity but not sure if it is still necessary
+}### Rationale --- MAY BE REMOVED!!!!
 Theta_bestS11B<-bestS11B$fit$par[names(bestS11B$fit$par)=="theta"]
 Theta_bestS11C<-bestS11C$fit$par[names(bestS11C$fit$par)=="theta"]
 
 #'-------------------------------------------------------------
-####	---- T-TEST ----
+####	T-TEST 
 ####	Test if there is difference in recruitment between the streams
 #'-------------------------------------------------------------
+
 RepIm%>%mutate(rec_rate=t0/t1)%>%
 glm(rec_rate~Site,data=.)
 
 #'-------------------------------------------------------------
-#### ----	REPRODUCTION PER PLOT ----
+#### REPRODUCTION PER PLOT
 #'-------------------------------------------------------------
 RecruitRate_site<-RepIm%>%
 ungroup()%>%
@@ -309,11 +310,9 @@ ylab(NULL)+xlab(NULL)
 
 RecruitRate_plot
 #'========================================================================
-#	---- ESTIMATING SURVIVAL ----
+#	---- ESTIMATING SURVIVAL ---- 
 #'========================================================================
-#'-------------------------------------------------------------
-##	---- TRANSFORMING CENSUS IN MONTH TIMESERIES ----
-#'-------------------------------------------------------------
+## TRANSFORMING CENSUS IN MONTH TIMESERIES 
 
 ## 2024
 Census2024_ts<-census2024%>%arrange(Site,Plot,Month)%>%
@@ -362,7 +361,7 @@ select(-c(Stage,Plot))%>%
 
 
 #'=========================================================================
-## ---- ESTIMATE SURVIVAL COMPONENT OF THE POPULATION MATRIX MODELS ----
+## ---- ESTIMATE SURVIVAL COMPONENTS OF THE POPULATION MATRIX MODELS ----
 #           "ModelToyv1.R" must be sourced
 #'=========================================================================
 
@@ -400,12 +399,22 @@ all_census_ts<-as.list(c(
 
 
 #'------------------------------------------------------------------------
-### REMOVE THOSE CENSUSES WHERE MATRICES COULD NOT BE ESTIMATED  ----
+### REMOVE THOSE CENSUSES WHERE MATRICES CANNOT BE ESTIMATED  
 #'------------------------------------------------------------------------
-## Rationale ----
-## 
-##'------------------------------------------------------------
-
+{
+  # Two plots at S11B could not have demographic information estimated
+  # because individuals are close to zero.
+  # Plots are:
+    ## Plot_19_2022 - Only adult individuals recorded?
+    ## Plot_15_2024 - Only 2 individuals in  March 
+  # I'm not sure if I can just remove them. Would be nice 
+  # On next section I provide an alternative by including matrix 2x2 with all elements equal to zero
+  # There are very few consequences by doing that:
+    # 1. Growth rate of year 2022 was close to 1 before this correction 
+      ## and become more reliable after this correction
+    # 2.  Extinction rate become significant different between streams 
+}## Rationale - !!!!!!!!!! DECISIONS TO MAKE !!!!!!!!!!!!
+#'-----------------------------------------------------------------------
 
 mpm_list_bkp<-mpm_list<-NULL
 for(i in 1:length(all_census_ts)){
@@ -431,17 +440,18 @@ mpm_list
 
 
 #'-------------------------------------------------------------
-##	---- Checking NULL and transform to zero  ----
-## Rationale ----
+##	---- Checking NULL and transform to zero 
+{## 
 ## NULL here represents populations that show very small number of individuals 
 ## Or even got extinct during the sampling (plots 15 and 19) 
 ## Now I transform them in matrices with all elements being equal to zero
-##'-------------------------------------------------------------
-
-# PROBLEMS PLOTS
+} # Rationale 
+#'-------------------------------------------------------------
+# Detect problem plots
 problems_plots<-mpm_list_bkp[lapply(lapply(mpm_list_bkp,complete.cases),any,FALSE)=="FALSE"]
 
 problems_plots
+
 
 all_census_ts[names(problems_plots)]
 
@@ -460,18 +470,29 @@ Census2024_ts$Plot_15_2024
 # Now make mpm_list being equal to mpm_list_bkp
 mpm_list <- mpm_list_bkp
 
-#'----------------------------------------------------------------------------
-#Uma possibilidade de incluir 1 como recrutamento para todas as matrizes
-# Ou da mesma forma um valor fixo de recrutamento, algo como a média
-#Somando as matrizes segue uma logica mais semelhante a seguinte
-#'----------------------------------------------------------------------------
+
+#'=========================================================================
+#   LINKING RECRUITEMENT TO QP ESTIMATION 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{ # There are few possibilities to estimate recruitment.
+  # 1. Fixing recruitment based on best model estimated from GLM
+  # 2. Simple ratio between t1/t0 
+  # NOTE. Fixing recruitment to 1 is no longer an option
+    # because there is better options 
+}# !!!!!!!!!!!!!! TWO POSSIBILITIES TO DECIDE !!!!!!!!!!!!!!
+#'=========================================================================
+
+{
+  # It sounds I'm working with two different scales.
+  # 
+  #sqrt(sqrt(exp(fixef(bestS11B)$cond[[1]])))
+  # Transforming recruitment as sqrt-sqrt seems like a option to rescale  
+} # URGENT NEED TO DETERMINE
+
 # MatU + MatF
-#Separa os MPMs (MatU) por riachos
+#Split MPMs by stream
 mpm_list_S11C<-mpm_list[grep("^Plot_([1-9]|10)_.*$", names(mpm_list))]
 mpm_list_S11B<-mpm_list[grep("^Plot_(1[1-9]|20)_.*$", names(mpm_list))]
-
-#Fixando em 1
-matF<-matrix(c(0,0,1,0),ncol=2)	
 
 #Fixando a reprodução de acordo com os glms
 mean_matF_S11B<-matrix(
@@ -491,20 +512,15 @@ mpm_list_recruit_S11C<-Map(`+`, mpm_list_S11C, list(mean_matF_S11C))
 mpm_list_recruit_S11B<-Map(`+`, mpm_list_S11B, list(mean_matF_S11B))
 
 
-mpm_list_recruit_S11B%>%lapply(.,as.vector)%>%do.call(rbind,.)
-mpm_list_recruit_S11C%>%lapply(.,as.vector)%>%do.call(rbind,.)
+mpm_list_recruit_S11B%>%lapply(.,as.vector)%>%do.call(rbind,.)%>%head()
+mpm_list_recruit_S11C%>%lapply(.,as.vector)%>%do.call(rbind,.)%>%head()
 
-## Fixado em 1
-mpm_list_fix1recruit<-Map(`+`, mpm_list, list(matF))
-
-
-mpm_list_fix1recruit
-
+mpm_list_recruit_full<-c(mpm_list_recruit_S11C,mpm_list_recruit_S11B)
 #'=======================================================================
 # 		Vital rate statistics and plot
 #'=======================================================================
 # OVERAL SUMMARY
-data.frame(do.call(rbind,lapply(mpm_list_fix1recruit,as.vector)),var="vr")%>%rownames_to_column(var = "VAR")%>%
+data.frame(do.call(rbind,lapply(mpm_list_recruit_full,as.vector)),var="vr")%>%rownames_to_column(var = "VAR")%>%
 as_tibble()%>%
 separate(VAR,sep="_",into = c("x", "Plot", "year"))%>%
 select(-x)%>%
@@ -520,7 +536,7 @@ summarise(Mean=mean(value),
 
 
 # PER PLOT
-Vital_rates<-data.frame(do.call(rbind,lapply(mpm_list_fix1recruit,as.vector)),var="vr")%>%rownames_to_column(var = "VAR")%>%
+Vital_rates<-data.frame(do.call(rbind,lapply(mpm_list_recruit_full,as.vector)),var="vr")%>%rownames_to_column(var = "VAR")%>%
 as_tibble()%>%
 separate(VAR,sep="_",into = c("x", "Plot", "year"))%>%
 select(-x)%>%
@@ -541,7 +557,7 @@ summarise(Mean=mean(value),
 		higher95=quantile(value,.975))
 
 #'-------------------------------------------------------------------------
-# TESTING DIFFERENCES AMONG VITAL RATES PER STREAMS
+# TESTING DIFFERENCES AMONG VITAL RATES PER STREAMS ----
 #'-------------------------------------------------------------------------
 
 Vital_rates%>%
@@ -587,7 +603,7 @@ tibble(
 
 
 #'-------------------------------------------------------------------------
-#	PLOT
+#	    PLOT
 #'-------------------------------------------------------------------------
 
 Vital_rates_plot<-Vital_rates_df%>%
@@ -609,8 +625,10 @@ facet_grid(.~VR)+
 xlab(NULL)+ylab(NULL)
 
 Vital_rates_plot
+
+
 #'----------------------------------------------------------------------------
-#	Valores de lambda e probabilidade de extinção
+#	  Observed Growth rate across the years
 #'----------------------------------------------------------------------------
 lambsSite<-rbind(
 do.call(rbind,lapply(mpm_list_recruit_S11C,lambda))%>%
@@ -622,6 +640,7 @@ do.call(rbind,lapply(mpm_list_recruit_S11B,lambda))%>%
 
 #TESTING DIFFERENCES
 t.test(lambsSite$.~lambsSite$Site)
+
 
 
 
@@ -643,6 +662,7 @@ summarise(Mean=mean(Lambda),
 
 lambsSite_df
 
+
 lambsPlot<-lambsSite_df%>%
 mutate(VAR="PopGrowthRate")%>%
 ggplot(.,aes(y=Mean,x=VAR,group=year))+
@@ -658,11 +678,19 @@ theme(legend.position="bottom")+
 facet_grid(.~VAR)+
 xlab(NULL)+ylab(NULL)
 
-#Eu adiciono as legendas nos gráficos 
-#pq por algum motivo as cores ficam trocadas 
-#se eu não mexer manualmente
-# Dai é melhor deixar cada gráfico com a legenda  
-#	e ai depois eu retiro durante o cowplot.
+lambsPlot
+
+#'----------------------------------------------------------------------------
+#	  Extinction probability - Population viability analyses
+#'----------------------------------------------------------------------------
+############### WORKING ##############
+
+# Mean/VAR stable stage distribution
+lapply(mpm_list_recruit_full,stable.stage)%>%do.call(rbind,.)%>%apply(.,2,mean)
+lapply(mpm_list_recruit_full,stable.stage)%>%do.call(rbind,.)%>%apply(.,2,sd)
+
+
+#------------ 
 
 n_init<-c(50,50)
 n_threshold<-sum(n_init)*.10
@@ -715,7 +743,7 @@ proptable_modif <- function(data, threshold) {
   prop <- prop.table(res) * 100
   return(prop)
 }
-##'-------------------------------------------------------------------------
+#'-------------------------------------------------------------------------
 
 apply(projS11C_30,1,sum)%>%range()
 apply(projS11B_30,1,sum)%>%range()
@@ -723,14 +751,14 @@ apply(projS11B_30,1,sum)%>%range()
 
 # Chi-square of extinction rate between streams
 data.frame(rbind(
-  proporcao_tf(projS11B_10, n_threshold),
-  proporcao_tf(projS11C_10, n_threshold)),
+  proptable_modif(projS11B_10, n_threshold),
+  proptable_modif(projS11C_10, n_threshold)),
   row.names = c("S11B", "S11C"))%>%
   print()%>%chisq.test()
 
 data.frame(rbind(
-  proporcao_tf(projS11B_30, n_threshold),
-  proporcao_tf(projS11C_30, n_threshold)),
+  proptable_modif(projS11B_30, n_threshold),
+  proptable_modif(projS11C_30, n_threshold)),
   row.names = c("S11B", "S11C"))%>%
   print()%>%chisq.test()
 
