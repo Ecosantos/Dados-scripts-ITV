@@ -1,0 +1,231 @@
+---
+title: "Framework Parapiqueria - Documentado"
+author:
+  - name: Gabriel S. Santos
+    orcid: 0000-0001-7991-8807
+    email: ssantos.gabriel@gmail.com
+    affiliations:
+      - name: Instituto Tecnológico Vale
+date: last-modified
+date-format: "[Last compiled on] D MMMM, YYYY - HH:mm[h]"
+format: 
+  html:
+    code-fold: show  # Determine code collapsed 
+editor: visual
+toc: true
+toc-location: left
+execute:
+  cache: false        #Chck if it is always works well
+knitr:
+  opts_chunk:
+    comment: "#>"
+    collapse: true
+reference-location: margin
+citation-location: margin
+tags:
+  - ITV
+  - Projetos/ITV/Daphonpsis
+aliases:
+  - Análises Daphnopsis
+  - Script Daphnopsis
+---
+
+```{css, echo = FALSE}
+.output {
+max-height: 500px;
+overflow-y: scroll;
+}
+```
+
+# Setting
+
+-   Packages
+-   Load data
+
+```{r label="Packages and loading data",  message=FALSE, warning=FALSE}
+
+gc()
+rm(list=ls())
+
+# Packages
+library(openxlsx)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+# Data
+year2022_raw<-read.xlsx("Dados Daphnopsis Nov2024.xlsx",colNames=T,detectDates=T,sheet="Maio2022")
+year2023<-year2023_raw<-read.xlsx("Dados Daphnopsis Nov2024.xlsx",colNames=T,detectDates=T,sheet="Maio2023")
+year2024<-year2024_raw<-read.xlsx("Dados Daphnopsis Nov2024.xlsx",colNames=T,detectDates=T,sheet="Junho2024")
+```
+
+# Data check
+
+-   Colunas importantes
+
+    -   Tag_Num -\> Old_tag (2022 -\> 2023)
+    -   New_Tag (A partir de 2023)
+    -   Plot
+    -   Site
+    -   Sexo
+    -   Est_Rep (Estg_Vida em 2022)
+    -   DAS_x e DAS_y
+    -   Height
+
+-   Checking columns
+
+    -   Columns are not necessarily equal between years, which reflects the changes decision on data collection.
+        -   What data is collected has changed but not how data was collected!
+
+-   Checking Tags
+
+    -   A new tag replaced tags used first
+    -   Also check if there is no repeated tags. - "-" and "Nova" means no old tags (i.e. tags of first census)
+
+```{r eval=F, echo=TRUE, message=FALSE, warning=FALSE, label="Data checking"}
+
+#file.edit("Scripts/Data checking.R")
+
+```
+
+# Data standardization
+
+-   Sum branches when necessary
+    -   Two branches are written as (3+1), so, total DAS is 4.
+-   Mean DAS
+-   Transform year2022\$Tag_Num to character
+
+```{r label="Data cleaning", echo=TRUE, message=FALSE, warning=FALSE}
+source("Scripts/Data cleaning.R")
+
+#file.edit("Scripts/Data cleaning.R")
+```
+
+## Merge data from different years
+
+# Statistics
+
+Total individuals = `r length(unique(c(y22_23$Tag,y23_24$Tag)))`
+
+```{r eval=FALSE}
+
+
+
+# Total individuals
+length(unique(c(y22_23$Tag,y23_24$Tag)))
+
+data.frame(
+  Metric=c("Height","DAS"),
+  Mean=c(
+# Mean Height and DAS
+mean(c(year2022$Height,year2023$Height,year2024$Height)),
+
+mean(c(year2022$DAS,year2023$DAS,year2024$DAS))
+),
+SD=c(
+# SD Height and DAS
+sd(c(year2022$Height,year2023$Height,year2024$Height)),
+
+sd(c(year2022$DAS,year2023$DAS,year2024$DAS))),
+MAX=c(
+# SD Height and DAS
+max(c(year2022$Height,year2023$Height,year2024$Height)),
+
+max(c(year2022$DAS,year2023$DAS,year2024$DAS))
+))
+
+
+# Individuos femininos
+
+
+```
+
+## Individuals per year
+
+```{r echo=FALSE}
+data.frame(Years=c("2022","2023","2024"),
+           Indiv=c(dim(filter(year2022,!is.na(DAS)))[1],
+                   dim(filter(year2023,!is.na(DAS)))[1],
+                   dim(filter(year2024,!is.na(DAS)))[1]),
+           Mean_DAS=c(mean(year2022$DAS),mean(year2023$DAS),mean(year2024$DAS)),
+           Std.desv_DAS=c(sd(year2022$DAS),sd(year2023$DAS),sd(year2024$DAS)),
+           Max_DAS=c(max(year2022$DAS),max(year2023$DAS),max(year2024$DAS)))%>%
+  knitr::kable()%>%kableExtra::kable_styling()
+```
+
+## Mortality and recruitment
+
+-   Recruits: DAS_t0 = NA (absent) but DAS_t1 != DAS_t1 (present and alive)
+
+-   Alives = DAS in t1
+
+```{r echo=FALSE}
+
+data.frame(
+# Period column
+  period=c("2022_2023","2023_2024"),
+
+# Merge demographic parameters in a single data.frame
+rbind(
+    y22_23%>%
+      mutate(Status=ifelse(!is.na(DAS_t1),"Alive","Dead"))%>%
+      mutate(Recruit=ifelse(!is.na(DAS_t1) & is.na(DAS_t0),"Yes","No"))%>%
+      summarise(Total=n(),
+                Recruits = sum(Recruit == "Yes"),
+                Nt0=Total-Recruits,
+                Deads = sum(Status == "Dead"),
+                Mortality=(Deads/Nt0)*100,
+                Recruits_prop = (Recruits/Nt0)*100,
+                Nt1=Nt0-Deads+Recruits),
+    y23_24%>%
+      mutate(Status=ifelse(!is.na(DAS_t1),"Alive","Dead"))%>%
+      mutate(Recruit=ifelse(!is.na(DAS_t1) & is.na(DAS_t0),"Yes","No"))%>%
+      summarise(Total=n(),
+                Recruits = sum(Recruit == "Yes"),
+                Nt0=Total-Recruits,
+                Deads = sum(Status == "Dead"),
+                Mortality=(Deads/Nt0)*100,
+                Recruits_prop = (Recruits/Nt0)*100,
+    Nt1=Nt0-Deads+Recruits))
+)%>%
+  knitr::kable()%>%kableExtra::kable_styling()
+```
+
+# Problemas para resolver (URGENTE!)
+
+::: panel-tabset
+### Problemas 1 (2022-2024)
+
+```{r}
+#| class: output    #Determina o uso do padrão css estipulado
+y22_24%>%
+  filter(Tag %in% names( table(y22_24$Tag)[ table(y22_24$Tag) > 1]))%>%
+  knitr::kable()%>%kableExtra::kable_styling()
+```
+
+### Problemas 2 (2022-2023)
+
+```{r}
+#| class: output    #Determina o uso do padrão css estipulado
+y22_23%>%
+  filter(Tag %in% names( table(y22_23$Tag)[ table(y22_23$Tag) > 1]))%>%
+  knitr::kable()%>%kableExtra::kable_styling()
+```
+
+### Problemas 3 (2022-2023)
+
+```{r}
+#| class: output    #Determina o uso do padrão css estipulado
+y22_24%>%
+  filter(Tag %in% names( table(y22_24$Tag)[ table(y22_24$Tag) > 1]))%>%
+  kableExtra::kbl() %>%
+  kableExtra::kable_classic_2(full_width = F)
+```
+:::
+
+\# Old scripts Script para sexagem.r Não é mais necessário agora que temos a função check_sex no script
+
+```{r "Script para sexagem"}
+#file.edit("Script para sexagem.r")
+
+```

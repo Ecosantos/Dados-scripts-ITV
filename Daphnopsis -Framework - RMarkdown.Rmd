@@ -1,0 +1,100 @@
+---
+title: Daphnopsis - Framework
+author: "Gabriel Santos"
+date: "2024-11-11"
+output: html_document
+tags:
+  - ITV
+  - Projetos/ITV/Daphonpsis
+aliases:
+  - Análises Daphnopsis
+  - Script Daphnopsis
+---
+
+# Setting
+
+-   Packages
+-   Load data
+
+```{r "Packages and loading data", echo=FALSE}
+gc()
+rm(list=ls())
+
+# Packages
+library(openxlsx)
+library(tidyverse)
+
+# Data
+year2022<-read.xlsx("Dados Daphnopsis Nov2024.xlsx",colNames=T,detectDates=T,sheet="Maio2022")
+
+year2023<-read.xlsx("Dados Daphnopsis Nov2024.xlsx",colNames=T,detectDates=T,sheet="Maio2023")
+
+year2024<-read.xlsx("Dados Daphnopsis Nov2024.xlsx",colNames=T,detectDates=T,sheet="Junho2024")
+
+
+```
+
+# Data check
+
+-   Colunas importantes
+
+    -   Tag_Num -\> Old_tag (2022 -\> 2023)
+    -   New_Tag (A partir de 2023)
+    -   Plot
+    -   Site
+    -   Sexo
+    -   Est_Rep (Estg_Vida em 2022)
+    -   DAS_x e DAS_y
+    -   Height
+
+-   Checking columns
+
+    -   Columns are not necessarily equal between years, which reflects the changes decision on data collection.
+        -   What data is collected has changed but not how data was collected!
+
+-   Checking Tags
+
+    -   A new tag replaced tags used first
+    -   Also check if there is no repeated tags. "-" and "Nova" means no old tags (i.e. tags of first census)
+
+```{r label="Data checking", echo=FALSE, eval=F}
+
+#file.edit("Scripts/Data checking.R")
+
+```
+
+# Data standardization
+
+-   Sum branches when necessary
+    -   Two branches are written as (3+1), so, total DAS is 4.
+-   Mean DAS
+-   Transform year2022\$Tag_Num to character
+
+```{r label="Data cleaning"}
+source("Scripts/Data cleaning.R")
+```
+
+# Merge data from different years
+
+# Statistics
+
+-   Individuals pear year
+    -   2022: `r length(year2022$Tag_Num)`
+    -   2023 `r length(year2022$Tag_Num)`
+    -   2024 `r length(year2022$Tag_Num)`
+
+```{r label="Number of individuals per year"}
+data.frame(Years=c("2022","2023","2024"),
+      Indiv=c(length(year2022$DAS),
+        length(year2023$DAS),
+        length(year2024$DAS)))
+```
+
+
+
+# Old scripts
+
+```{r "Script para sexagem"}
+file.edit("Script para sexagem.r")
+
+```

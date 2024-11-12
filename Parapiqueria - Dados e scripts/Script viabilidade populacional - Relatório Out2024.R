@@ -399,6 +399,10 @@ all_census_ts<-as.list(c(
   Census2023_ts,
   Census2024_ts))
 
+# USAR LOGARÍTIMO?
+# Ver em [[Implementação dos modelos inversos em Parapiqueria]]
+# all_census_ts<-lapply(all_census_ts, function(df) log(df + 1))
+
 
 #'------------------------------------------------------------------------
 ### REMOVE THOSE CENSUSES WHERE MATRICES CANNOT BE ESTIMATED  
