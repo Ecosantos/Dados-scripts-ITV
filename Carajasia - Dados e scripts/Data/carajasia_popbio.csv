@@ -1,0 +1,686 @@
+Plot;stage;stage 2;;fate;fate2
+1;2;Jovem ;;2;jovem
+1;3;Reprodutivo;5.6;2;jovem
+1;2;Jovem ;51.2;0;dead
+1;2;Jovem ;43.1;0;dead
+1;3;Reprodutivo;6.7;2;Jovem
+1;2;Jovem ;21.4;0;dead
+1;2;Jovem ;5;0;dead
+1;2;Jovem ;17.1;2;Jovem
+1;2;Jovem ;27.2;3;Reprodutiva
+1;2;Jovem ;5;0;dead
+1;2;Jovem ;27.8;2;jovem
+2;3;Reprodutivo;15.1;3;Reprodutiva
+2;2;Jovem ;30.9;0;dead
+2;3;Reprodutivo;5;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;23.2;0;dead
+2;2;Jovem ;7.8;0;dead
+2;3;Reprodutivo;7.4;0;dead
+2;2;Jovem ;20.3;0;dead
+2;3;Reprodutivo;5.8;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;6.2;0;dead
+2;2;Jovem ;5.5;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;5.9;3;Reprodutiva
+2;2;Jovem ;5;0;dead
+2;3;Reprodutivo;5;0;dead
+2;2;Jovem ;5;2;Jovem
+2;2;Jovem ;5.5;0;dead
+2;2;Jovem ;7.2;0;dead
+2;2;Jovem ;7.5;0;dead
+2;2;Jovem ;5.5;2;Jovem
+2;3;Reprodutivo;6.1;0;dead
+2;3;Reprodutivo;6.1;3;Reprodutiva
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;5.5;0;dead
+2;3;Reprodutivo;6;0;dead
+2;2;Jovem ;5;0;dead
+2;3;Reprodutivo;5.5;0;dead
+2;3;Reprodutivo;5;0;dead
+2;2;Jovem ;5;0;dead
+2;3;Reprodutivo;5;0;dead
+2;3;Reprodutivo;5;0;dead
+2;2;Jovem ;7.6;0;dead
+2;2;Jovem ;5.5;0;dead
+2;3;Reprodutivo;23;0;dead
+2;3;Reprodutivo;5.8;0;dead
+2;3;Reprodutivo;5.8;0;dead
+2;2;Jovem ;11.3;0;dead
+2;2;Jovem ;7;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;5.5;0;dead
+2;3;Reprodutivo;5.1;0;dead
+2;3;Reprodutivo;5.9;3;Reprodutiva
+2;3;Reprodutivo;5;0;dead
+2;3;Reprodutivo;5.8;0;dead
+2;3;Reprodutivo;8.1;0;dead
+2;3;Reprodutivo;28;2;Jovem
+2;3;Reprodutivo;5;0;dead
+2;3;Reprodutivo;5;0;dead
+2;2;Jovem ;11.8;0;dead
+2;3;Reprodutivo;5;0;dead
+2;3;Reprodutivo;5.5;0;dead
+2;3;Reprodutivo;5.4;0;dead
+2;2;Jovem ;5;0;dead
+2;3;Reprodutivo;5;0;dead
+2;2;Jovem ;5;0;dead
+2;3;Reprodutivo;5;0;dead
+2;3;Reprodutivo;5;0;dead
+2;2;Jovem ;6.9;2;jovem
+2;2;Jovem ;6.9;0;dead
+2;3;Reprodutivo;5;0;dead
+2;3;Reprodutivo;5;0;dead
+2;3;Reprodutivo;6.8;0;dead
+2;2;Jovem ;6.6;2;Jovem
+2;3;Reprodutivo;25.11;3;Reprodutiva
+2;3;Reprodutivo;5.2;2;Jovem
+2;3;Reprodutivo;5;2;Jovem
+2;3;Reprodutivo;7;2;Jovem
+2;3;Reprodutivo;5;2;Jovem
+2;3;Reprodutivo;7.8;0;dead
+2;3;Reprodutivo;7.2;0;dead
+2;2;Jovem ;17.9;0;dead
+2;3;Reprodutivo;23.8;0;dead
+2;2;Jovem ;41.4;0;dead
+2;2;Jovem ;39.6;0;dead
+2;2;Jovem ;5;0;dead
+2;3;Reprodutivo;5;0;dead
+2;3;Reprodutivo;29;0;dead
+2;3;Reprodutivo;5;0;dead
+2;2;Jovem ;5;2;Jovem
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;19.1;0;dead
+2;2;Jovem ;5.5;0;dead
+2;2;Jovem ;5.7;0;dead
+2;3;Reprodutivo;5.5;0;dead
+2;2;Jovem ;5.5;2;Jovem
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;34.9;0;dead
+2;2;Jovem ;98.1;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;28.4;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;6.6;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;6.2;0;dead
+2;2;Jovem ;42.9;0;dead
+2;2;Jovem ;77.8;0;dead
+2;3;Reprodutivo;11.5;3;Reprodutiva
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;19.9;0;dead
+2;2;Jovem ;18.1;2;Jovem
+2;3;Reprodutivo;36.9;0;dead
+2;2;Jovem ;23.5;2;Jovem
+2;3;Reprodutivo;18.9;2;Jovem
+2;3;Reprodutivo;8.6;0;dead
+2;3;Reprodutivo;8.1;2;Jovem
+2;3;Reprodutivo;37.2;0;dead
+2;3;Reprodutivo;41.8;0;dead
+2;3;Reprodutivo;37.6;0;dead
+2;3;Reprodutivo;112.4;0;dead
+2;3;Reprodutivo;40.1;0;dead
+2;3;Reprodutivo;7.1;0;dead
+2;3;Reprodutivo;5;2;Jovem
+2;3;Reprodutivo;32.4;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;35.5;0;dead
+2;2;Jovem ;5;0;dead
+2;3;Reprodutivo;65.7;0;dead
+2;3;Reprodutivo;62;0;dead
+2;3;Reprodutivo;5;0;dead
+2;3;Reprodutivo;11.1;0;dead
+2;3;Reprodutivo;21.5;0;dead
+2;3;Reprodutivo;37;0;dead
+2;3;Reprodutivo;10.1;0;dead
+2;3;Reprodutivo;11.1;0;dead
+2;3;Reprodutivo;23.3;0;dead
+2;3;Reprodutivo;7.1;0;dead
+2;2;Jovem ;7.1;0;dead
+2;2;Jovem ;7.1;0;dead
+2;3;Reprodutivo;7.1;0;dead
+2;3;Reprodutivo;7.1;0;dead
+2;2;Jovem ;7.1;0;dead
+2;2;Jovem ;7;2;Jovem
+2;2;Jovem ;64.7;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;17.5;0;dead
+2;2;Jovem ;5;2;Jovem
+2;2;Jovem ;14;0;dead
+2;2;Jovem ;13.6;0;dead
+2;2;Jovem ;66.8;2;Jovem
+2;2;Jovem ;6.8;0;dead
+2;2;Jovem ;5.8;0;dead
+2;3;Reprodutivo;5;0;dead
+2;2;Jovem ;5;0;dead
+2;3;Reprodutivo;7.3;0;dead
+2;3;Reprodutivo;5;0;dead
+2;2;Jovem ;5;0;dead
+2;3;Reprodutivo;21.7;0;dead
+2;3;Reprodutivo;16.3;0;dead
+2;3;Reprodutivo;89.3;0;dead
+2;3;Reprodutivo;9.7;0;dead
+2;3;Reprodutivo;5;0;dead
+2;3;Reprodutivo;12.7;0;dead
+2;3;Reprodutivo;5;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;5;0;dead
+2;2;Jovem ;20.7;0;dead
+2;2;Jovem ;22.7;0;dead
+2;2;Jovem ;44.2;0;dead
+2;2;Jovem ;16.2;0;dead
+2;2;Jovem ;53.2;0;dead
+2;2;Jovem ;32.4;0;dead
+2;2;Jovem ;11.4;0;dead
+3;2;Jovem ;16.9;2;Jovem
+3;2;Jovem ;24.4;0;dead
+3;2;Jovem ;28.3;0;dead
+3;3;Reprodutivo;33.75;0;dead
+3;2;Jovem ;18.5;0;dead
+3;2;Jovem ;24.7;0;dead
+3;2;Jovem ;10.2;0;dead
+3;3;Reprodutivo;24.1;2;Jovem
+3;3;Reprodutivo;46.02;0;dead
+3;3;Reprodutivo;12.8;0;dead
+3;3;Reprodutivo;22.3;0;dead
+3;3;Reprodutivo;45.4;0;dead
+3;3;Reprodutivo;13.2;3;Reprodutiva
+3;2;Jovem ;63.4;0;dead
+4;2;Jovem ;64.4;0;dead
+4;2;Jovem ;108.6;0;dead
+4;2;Jovem ;96.1;0;dead
+4;2;Jovem ;15.6;0;dead
+4;2;Jovem ;5;0;dead
+4;2;Jovem ;5;0;dead
+4;2;Jovem ;33.17;0;dead
+4;2;Jovem ;5;0;dead
+4;2;Jovem ;15;0;dead
+4;2;Jovem ;30.1;0;dead
+4;2;Jovem ;30.2;0;dead
+4;2;Jovem ;68.3;0;dead
+4;2;Jovem ;21.8;0;dead
+4;2;Jovem ;53.7;0;dead
+4;2;Jovem ;29.6;0;dead
+4;2;Jovem ;19;0;dead
+4;3;Reprodutivo;12.3;0;dead
+4;3;Reprodutivo;33.7;0;dead
+4;2;Jovem ;31.6;0;dead
+4;3;Reprodutivo;40.9;0;dead
+4;3;Reprodutivo;39.7;0;dead
+5;3;Reprodutivo;39.1;0;dead
+5;3;Reprodutivo;30.1;0;dead
+5;2;Jovem ;5;0;dead
+5;2;Jovem ;5;0;dead
+5;2;Jovem ;22.9;0;dead
+5;2;Jovem ;15;0;dead
+5;3;Reprodutivo;11.1;0;dead
+5;2;Jovem ;38.3;0;dead
+5;2;Jovem ;15.2;0;dead
+5;3;Reprodutivo;26.1;0;dead
+5;2;Jovem ;16;0;dead
+5;2;Jovem ;52;0;dead
+5;2;Jovem ;50.7;0;dead
+5;3;Reprodutivo;5;3;Reprodutiva
+5;3;Reprodutivo;5;0;dead
+5;3;Reprodutivo;;0;dead
+5;3;Reprodutivo;;0;dead
+5;3;Reprodutivo;;0;dead
+5;3;Reprodutivo;;0;dead
+5;3;Reprodutivo;;0;dead
+5;3;Reprodutivo;;0;dead
+5;3;Reprodutivo;;2;Jovem
+5;3;Reprodutivo;;3;Reprodutiva
+5;3;Reprodutivo;;0;dead
+5;2;Jovem ;;0;dead
+5;2;Jovem ;;0;dead
+5;2;Jovem ;;0;dead
+5;2;Jovem ;;0;dead
+5;2;Jovem ;;0;dead
+5;3;Reprodutivo;;0;dead
+5;3;Reprodutivo;;0;dead
+5;3;Reprodutivo;;0;dead
+5;2;Jovem ;;0;dead
+5;2;Jovem ;;0;dead
+5;3;Reprodutivo;;0;dead
+5;3;Reprodutivo;;0;dead
+5;2;Jovem ;;0;dead
+5;2;Jovem ;;0;dead
+5;3;Reprodutivo;;0;dead
+5;2;Jovem ;;0;dead
+5;3;Reprodutivo;;0;dead
+5;3;Reprodutivo;;0;dead
+5;2;Jovem ;;0;dead
+5;2;Jovem ;;0;dead
+5;3;Reprodutivo;;0;dead
+5;3;Reprodutivo;;2;Jovem
+5;2;Jovem ;;0;dead
+5;2;Jovem ;;0;dead
+5;2;Jovem ;;0;dead
+5;3;Reprodutivo;;0;dead
+5;2;Jovem ;;0;dead
+5;2;Jovem ;;3;Reprodutiva
+6;2;Jovem ;;3;Reprodutiva
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;3;Reprodutiva
+6;2;Jovem ;;0;dead
+6;3;Reprodutivo;;0;dead
+6;3;Reprodutivo;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;3;Reprodutiva
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;3;Reprodutiva
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+6;2;Jovem ;;0;dead
+7;2;Jovem ;;0;Jovem
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+7;2;Jovem ;;0;dead
+8;2;Jovem ;;0;dead
+8;2;Jovem ;;0;dead
+8;2;Jovem ;;0;dead
+8;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;3;Reprodutivo;;0;dead
+9;3;Reprodutivo;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;3;Reprodutivo;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;3;Reprodutiva
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;2;Jovem
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;3;Reprodutivo;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;2;Jovem
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+9;2;Jovem ;;0;dead
+10;2;Jovem ;;0;dead
+10;2;Jovem ;;0;dead
+10;2;Jovem ;;3;Reprodutiva
+10;1;seed;;2;Jovem
+1;1;seed;;2;Jovem
+1;1;seed;;2;Jovem
+1;1;seed;;2;Jovem
+1;1;seed;;3;Reprodutiva
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;3;Reprodutiva
+2;1;seed;;2;Jovem
+2;1;seed;;3;Reprodutiva
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;3;Reprodutiva
+2;1;seed;;2;Jovem
+2;1;seed;;3;Reprodutiva
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;3;Reprodutiva
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;3;Reprodutiva
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;3;Reprodutiva
+2;1;seed;;3;Reprodutiva
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+2;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+3;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+4;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;3;Reprodutiva
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+5;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+6;1;seed;;3;Reprodutiva
+6;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+6;1;seed;;3;Reprodutiva
+6;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+6;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;3;Reprodutiva
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+7;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+8;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;3;Reprodutiva
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+9;1;seed;;2;Jovem
+10;1;seed;;2;Jovem
+10;1;seed;;2;Jovem
+10;1;seed;;2;Jovem
+10;1;seed;;2;Jovem
+10;1;seed;;2;Jovem
+10;1;seed;;2;Jovem
+10;1;seed;;2;Jovem

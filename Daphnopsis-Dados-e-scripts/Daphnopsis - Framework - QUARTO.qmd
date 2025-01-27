@@ -1,5 +1,5 @@
 ---
-title: "Framework Parapiqueria - Documentado"
+title: "Framework Daphnopsis - Documentado"
 author:
   - name: Gabriel S. Santos
     orcid: 0000-0001-7991-8807
@@ -109,34 +109,26 @@ Total individuals = `r length(unique(c(y22_23$Tag,y23_24$Tag)))`
 
 ```{r eval=FALSE}
 
-
-
 # Total individuals
 length(unique(c(y22_23$Tag,y23_24$Tag)))
 
 data.frame(
   Metric=c("Height","DAS"),
   Mean=c(
-# Mean Height and DAS
-mean(c(year2022$Height,year2023$Height,year2024$Height)),
-
-mean(c(year2022$DAS,year2023$DAS,year2024$DAS))
-),
-SD=c(
-# SD Height and DAS
-sd(c(year2022$Height,year2023$Height,year2024$Height)),
-
-sd(c(year2022$DAS,year2023$DAS,year2024$DAS))),
+    # Mean Height and DAS
+      mean(c(year2022$Height,year2023$Height,year2024$Height)),
+      mean(c(year2022$DAS,year2023$DAS,year2024$DAS))),
+  SD=c(
+    # SD Height and DAS
+      sd(c(year2022$Height,year2023$Height,year2024$Height)),
+      sd(c(year2022$DAS,year2023$DAS,year2024$DAS))),
 MAX=c(
-# SD Height and DAS
-max(c(year2022$Height,year2023$Height,year2024$Height)),
-
-max(c(year2022$DAS,year2023$DAS,year2024$DAS))
-))
+# MAX Height and DAS
+      max(c(year2022$Height,year2023$Height,year2024$Height)),
+      max(c(year2022$DAS,year2023$DAS,year2024$DAS))))
 
 
 # Individuos femininos
-
 
 ```
 
