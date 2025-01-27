@@ -94,13 +94,13 @@ Código disponível em: [[#Plots de abundância ao longo do tempo entre riachos]
 
 
 ## Diversidade genética
-- [[Diversidade genética]] estimada pela Bárbara
+- [[Diversidade genética - Definições e métricas]] estimada pela Bárbara
 	- Ver artigo em: [[Barbara Leal et al - Genetica de plantas criticas.docx]]
 	- Utilizou [[Single Nucleotide Polymorphism|SNPs]] obtidos a partir do método de representatividade reduzida[^9] 
 - Resultados
 	- Há três clusters genético para _P. cavalcantei_ representando cada riacho amostrado. [^7]
 		- Essa diferenciação por exemplo não existe em Carajasia e Ipomoea
-	- Ainda que haja três clusters, os valores de [[Diversidade genética|FST]] (?) indicam uma baixa variação entre as populações, sugerindo que seriam a mesma população geneticamente falando.
+	- Ainda que haja três clusters, os valores de [[Diversidade genética - Definições e métricas|FST]] (?) indicam uma baixa variação entre as populações, sugerindo que seriam a mesma população geneticamente falando.
 	- Parapiqueria apresenta uma diversidade genética intermediária comparada a outras espécies
 		- Ipomoea cavalcantei ($H_o$ = 0.150)>> Parapiqueria cavalcantei ($H_o$ = 0.092) >>> Carajasia ($H_o$ = 0.004)
 	- Comparação entre riachos. Interpretação pessoal

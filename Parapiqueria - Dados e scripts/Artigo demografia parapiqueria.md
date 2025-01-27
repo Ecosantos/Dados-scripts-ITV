@@ -48,7 +48,7 @@ Referências ResearchRabbit: https://www.researchrabbitapp.com/collection/public
 
 # TO DO
 - [ ] Padronizar uso de CI95%, SD e SE
-	- Como alguns valores de sobrevivência são negativos pq o modelo não ajusta bem, fica esquisito utilizar CI. Mas por outro lado SD não é legal pq os dados não são normais então talvez SE fosse melhor.
+	- Como alguns valores de sobrevivência são negativos pq o modelo não ajusta bem, fica esquisito utilizar CI. Mas por outro lado SD não é legal pq os dados não são normais então talvez SE fosse melhor. [^35]
 
 # Paralavras e questionamentos interessantes
 - Metodologia
@@ -385,3 +385,4 @@ Zipkin EF, Thorson JT, See K, Lynch HJ, Grant EHC, Kanno Y, Chandler RB, Letcher
 [^32]: Discussão semelhante em Murtaugh PA. 2007. SIMPLICITY AND COMPLEXITY IN ECOLOGICAL DATA ANALYSIS. _Ecology_ 88:56–62. DOI: [10.1890/0012-9658(2007)88[56:SACIED]2.0.CO;2](https://doi.org/10.1890/0012-9658(2007)88[56:SACIED]2.0.CO;2).
 [^33]: Ver Wood, S. N. 1997. Inverse problems and structured-population dynamics. Pages 555–586 in S. Tuljapurkar and H. Caswell, editors. Structured-population models in marine, terrestrial, and freshwater systems. Chapman and Hall, New York, New York, USA.
 [^34]: A conclusão não inclui os achados da biologia da espécie. Aqui é interessante informar os aspectos importantes que foram possíveis concluir ou pelo menos as questões levantar graças ao modelo inverso aplicado.
+[^35]: Ver solução através do logarítimo da contagem dos indvíduos
