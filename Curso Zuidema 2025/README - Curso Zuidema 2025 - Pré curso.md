@@ -1,6 +1,7 @@
 > [!info] **Compilação pessoal de informações**
 > - **Temática**: Disciplina de ecologia de populações por Peter Zuidema
 > - **Tags:** #Demografia #Demografia/MPM #Demografia/IPM #Projetos/ITV/Carajasia #Projetos/ITV/Daphonpsis #Projetos/ITV/Ipomoea 
+> - **Ver também** [[Curso Zuidema 2025 - Basics of plant population modelling and its application]]
 
 
 - Dados a serem utilizados durante a disciplina.

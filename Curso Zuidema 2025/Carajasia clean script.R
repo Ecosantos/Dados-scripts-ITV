@@ -45,7 +45,7 @@ Carajasia2<-Carajasia%>%
   mutate(survival =ifelse(Status %in% c("Reprodutivo","Jovem"),1,0))%>%
   mutate(id=row_number())
 
-
+head()
 
 Carajasia2%>%glimpse()
 table(Carajasia2$Status)

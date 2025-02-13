@@ -6,6 +6,11 @@ lang: en-UK
 
 ## [https://docs.google.com/document/d/1Wk5n6P7wRexZ83jidtEnAVwfAkUc0C4XO2Oxjr8Bw4o/edit?usp=sharing](https://docs.google.com/document/d/1Wk5n6P7wRexZ83jidtEnAVwfAkUc0C4XO2Oxjr8Bw4o/edit?usp=sharing)
 
+
+>[! danger] MEtodologia INSIGHTS
+> Quando explicar a metodologia do MatU + MatF talvez buscar literatura para citar a abordagem já que no IPM SEMPRE faz com essa construção para criar o Kernell K(x,y)
+> 
+
 ----
 
 
