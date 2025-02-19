@@ -6,11 +6,11 @@
 > - **Ver também procedimentos pré-curso**: [[README - Curso Zuidema 2025 - Pré curso]]
 
 
-# Lembretes
-- Novo script "....\_CORRECTED"  adicionou estocasticidade ambiental
+# Scripts 
+
 
 # TODO
-- [ ] Ler artigos
+- [x] Ler artigos ✅ 2025-02-14
 
 
 # Presentation
@@ -363,7 +363,120 @@ ver [[Lecture Thursday IPM tips.pdf#page=11]]
 ### Using  GAM
 - GAM is too flexible and it is possible it will not handle very well missing classes. GLM can be more robust in such cases.
 	- Pieter suggested try, He believe ipmr can handle that,
-- 
+
+### Para long-lived espécies onde a mortalidade é muito alta
+- Se deixar os indivíduos viverem para sempre (nos modelos IPM/MPMs) eles tenderão a gerar problemas sérios para as estatísticas:
+	- Viéses na elasticidade
+	- Skewing the stable stage structure
+# Presentation
+### Rafael Costa - Unha do diabo x Carnaúba
+- Como o suporte afeta o crescimento populacional da unha do diabo em áreas de carnaubal (concentrações de carnaúba) 
+	- Já tem informações --> quando há suporte os indivíduos de unha do diabo tendem a ser favorecidos.
+- Criou um modelo matricial onde há um probabilidade dos indivíduos podem chegar e se estabelecer em um suporte. E para isso 
+- Está tentando implementar um IPM que inclua o suporte como co-variável
+	- No caso, support como covariável nos modelos glm para survival, growth and reproduction
+	- Objetivos do IPM:
+		- Elasticity how important is support for $\lambda$
+		- How proportion of support-using plants influence pop. dynamics?
+			- A kind of density dependence model
+	- Data collected
+		- Three census 5x5m plots
+		- Survival records
+		- Recruitment data + Seed rain for each plot (see traps)
+### ❗❗❗minha apresentação ❗❗❗❗
+[[Apresentação curso Pieter#Comentarios Zuidema]]
+
+### Janaina
+- Médio Juruá x Fox do rio Amazonas
+	- 30years x 8 years of extractivism (respectively)
+- Questions:
+	1. Como as populações mudam sobre diferentes cenários de extração Juruá x rio Amazonas
+	2. Efeito da Açaízação
+	3. Avaliar o efeito da remoção de sementes na estrutura populacional das espécies alvo
+		- Quatro espécies alvo:
+			- Murumuru (*Astrocaryum murumuru*) - Clonal species
+			- Andiroba (*Carapa guianensens*) - Dioecious species
+			- Pracaxi (*Pentaclethra macroloba*) - Não ocorre em Juruá
+			- Ucuúba (*Virola surinamensis*) - Pararam de coletar depois de um tempo
+- Study site
+	- 4 plots (100x50m) em cada
+		- 2 plots Harvesting x 2 plots not-harvesting
+		- 2 plots açaí grooves x 2 plots Natural forests
+		- It means
+			- 1 plot Harvesting + Açaí
+			- 1 plot non-harvesting + Açaí
+			- 1 plot natural + Harvest
+			- 1 plot natura + non-harvesting
+	- Plot strip para juveniles
+		- 3x100m
+- Vital rates
+	- Fruiting production by individuals
+		- Para aniroba, Pracaxi e Ucuúba com score de produção
+	- Germination in loco
+		- 20 sementes por parcela 
+- Data:
+	-  2023
+	- 2024-2025 & 2025-2026 (better demographic data + fruiting)
+
+#### Para o murumuru
+- O maior problema era a clonalidade
+- Impossível fazer as análises a nível de rametas
+- Para fazer as análises a nível de geneta por outro lado basta incluir as folhas e estipes de cada indivíduo clonal em um único individuo. 
+
+### Fernando Cardoso
+- IPM aplicado à corais de abrolhos
+	- *Montastraea cavernosa* (MoCa) & *Mussismilia braziliensis* (MuBr)
+		- Mussismilia braziliensis cover 10% od coral cover in reef tops [^6]
+- Questions:
+	- How viable are population of the two most dominant coral species in Abrolhos
+	- Compare coral response under heatwave across the time
+- Sampling size total
+	- 5 sampling areas
+	- Individual colony as "individual"[^7] [^8]
+		- 24 MuBr 
+		- 55 MoCa
+	- Timeseries: 
+	- Several thermal anomaly
+		- Nov 2018, Apr2019, Sep2019, May2021
+	- Fate tracked colony from 2018-2024
+- Recruitment data
+	- Orthomosaics + artificial structures
+		- Orthomosaics coletados ao longo das séries temporais no passado podem ser utilizadas para buscar individuos no passado
+- Sugestões Zuidema
+	- 3 IPMs, antes, durante e depois da heatwave.
+- Ver https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2656.13340
+	- Baixo N amostral também
+
+### Rita Portela
+- ICMBio is now obsessed with demography (according to Rita)
+
+
+### Carolina Carvalho (Carol) - ITV
+- Daphnopsis filipendunculata (Thymelaeaceae)
+- Dados disponíveis
+	- Abundancia de 152 plots
+		- Incluindo a classe etária desses indivíduos
+	- Clonality
+		- N1: 40 individuals genotyped - only 26 with unique genotypes
+	- Floração
+		- Apenas 20% das flores fertiilizadas produzem sementes[^9]
+- COMO OS IPMS FORAM CONSTRUÍDOS
+	- DOIS IPMS
+		- 1º IPM
+			- Consider all reproductives could could produce seeds/seedlings
+			- All new recruits from sexual reproduction
+		- 2º IPM - Clonality accounted
+			- All reproductive adults could produce seeds/seedlings
+			- Reproductive adults > 120cm could grow vegetatively
+			- All new recruits from vegetative propagation
+			- New recruts from sexual reproduction
+		- OBSERVAÇÃO:
+			- Os modelos da Carol parecem estar todos baseados em Mesh size mas ela falou que eram o tamanho
+				- Porém os indivíduos não crescem mais do que 3m se não me engano.
+				- 
+
+
+
 # Notes
 
 [^1]: Interessante. Não lembro de ter visto age no COMPADRE, mas provavelmente tem sim
@@ -371,3 +484,7 @@ ver [[Lecture Thursday IPM tips.pdf#page=11]]
 [^3]:Essa relação também ocorre quando estamos trabalhando com Mesh sizes pequenos nos IPMs! 
 [^4]: Curioso. Eu achava que era o mais fácil
 [^5]: Pelo que entendi aqui é aquele gráfico de distribuição representando qual a probabilidade de um individuo transicionar de um tamanho pra outro. O ideal é que no gráfico seja possível visualizar uma curva bem definida. Essa curva bem definida deve conteur pelo menos 5 pontos.
+[^6]: Coral cérebro?
+[^7]: Very small sample size. A opnião do Zuidema é que : pooling data?  
+[^8]: As cinco áreas amostradas podem ser agrupadas. Há evidência de que toda a região nordeste é na verdade uma mesma população, então não há nenhum problema 
+[^9]: Perguntar à Carol sobre esses dados
